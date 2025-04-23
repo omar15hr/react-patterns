@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b shadow-md bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-2">
       <div className="container flex h-14 items-center">

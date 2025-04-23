@@ -1,3 +1,5 @@
+import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+
 const patterns = [
   {
     id: 1,
@@ -33,17 +35,17 @@ const patterns = [
 
 export function CardList() {
   return (
-    <>
+    <section className="flex flex-wrap gap-5 justify-center mt-10">
       {patterns.map(({ id, name, description }) => (
-        <div
+        <Card
           key={id}
           className="flex flex-col w-64 justify-center gap-2 border p-3 rounded-lg cursor-pointer transition-transform duration-600 hover:scale-105 shadow"
         >
           <img src="#" alt="" />
-          <h1 className="text-lg font-bold text-blue-400">{name}</h1>
-          <p className="text-sm">{description}</p>
-        </div>
+          <CardTitle className="text-lg font-bold text-blue-400">{name}</CardTitle>
+          <CardDescription className="text-sm">{description}</CardDescription>
+        </Card>
       ))}
-    </>
+    </section>
   );
 }
